@@ -1,0 +1,173 @@
+
+  <!-- top Div -->
+  <div class="top">
+    <div class="row">
+      <div class="col-md-7 col-md-offset-5">
+        <div class="searchDiv">
+          <div class="input-group">
+            <input type="text" class="form-control searchInput"
+              id="searchInput" aria-label="...">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle"
+                data-toggle="modal" data-backdrop="false" data-target="#myModal">
+                Advanced <span class="caret"></span>
+              </button>
+              <button type="button" class="btn btn-primary" onclick="searchVague();">Search</button>
+            </div>
+            <!-- /btn-group -->
+          </div>
+          <!-- /input-group -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /div.top-->
+
+  <!-- nav -->
+  <nav class="navbar navbar-inverse" style="margin-bottom:3px"> <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed"
+      data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+      <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.jsp">Home</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav ">
+
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gene Parts Modules <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Metabolism Modules<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Primary Metabolism</a></li>
+            <li><a href="#">Secondary Metabolism</a></li>
+            <li><a href="#">Xenobiotics Biodegradation and Metabolism</a></li>
+            <li><a href="#">Chemical Structure Transfoamation</a></li>
+          </ul>
+        </li>
+
+     
+            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Other Functional Modules<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Genetic Information Processing</a></li>
+            <li><a href="#">Enviromental Information Processing</a></li>
+            <li><a href="#">Cellular Processing</a></li>
+          </ul>
+        </li>
+     
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Organisms<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Original Organisms</a></li>
+            <li><a href="#">Target Organisms</a></li>
+          </ul>
+        </li>
+      <li><a href="#">Tools</a></li>
+      <li><a href="#">Blast</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Purchase</a></li>
+      <li><a href="#">Contact Us</a></li>
+
+    </ul>
+  </div>
+  <!-- /.navbar-collapse --> <!-- /.container-fluid --> </nav>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+            aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Searching</h4>
+        </div>
+        <div class="modal-body" id="modalContent">
+          <input id="maxrowNum" type="text">
+          <form role="form">
+            <table id="table1" class="table">
+              <tr id="searchTbtr1">
+                <td class="searchTb"><select class="form-control">
+                    <option value="smbid">Entry Name</option>
+                    <option value="proteinname">Protein Name</option>
+                    <option value="genename">Gene Name</option>
+                    <option value="genestatus">Gene Status</option>
+                    <option value="existence">Protein Existence</option>
+                    <option value="funcclassific">Functional
+                      Classification</option>
+                    <option value="originalorganism">Original Organism</option>
+                    <option value="taxonomicidentifier">Taxonomy</option>
+                    <option value="targetorganism">Target Organism</option>
+                    <option value="function">Function</option>
+                    <option value="catalyticactivity">Catalytic Activity</option>
+                    <option value="cofactor">Cofactor</option>
+                    <option value="pathway">Pathway</option>
+                    <option value="subcellloc">Subcellular location</option>
+                    <option value="interaction">STRING</option>
+                    <option value="structure">PDB</option>
+                    <option value="uniprot">Uniprot</option>
+                    <option value="ddbj">DDBJ</option>
+                    <option value="embl">EMBL</option>
+                    <option value="genebank">GenBank</option>
+                    <option value="refseq">RefSeq</option>
+                    <option value="kegg">KEGG</option>
+                    <option value="entry">EC Entry</option>
+                    <option value="enzymename">Enzyme Name</option>
+                    <option value="ecclass">Ec Class</option>
+                    <option value="sysname">Enzyme Sysname</option>
+                    <option value="substrate">Substrate</option>
+                    <option value="product">Product</option>
+                </select></td>
+                <td class="searchTb"><input type="text"
+                  class="form-control" id="input1" placeholder=""></td>
+                <td id="searchTbtr1td3" class="searchTb">
+                  <button type="button" class="btn btn-primary btn-lg"
+                    aria-label="add Column" onclick="addRow(1)"
+                    id="searchTbtr1td3addbtn">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  </button>
+
+                </td>
+              </tr>
+            </table>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="searchBtn"
+            onclick="search();">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<form id="SearchForm" name="SearchForm" method="post">
+  <textarea id="saveForm" name="saveForm" style="display:none"></textarea>
+  <textarea id="saveFormVague" name="saveFormVague" style="display:none"></textarea>
+  <textarea id="searchType" name="searchType" style="display:none"></textarea>
+</form>
+  <textarea id="currentPageNo" style="display:none"></textarea>
+  <textarea id="currentPageSize" style="display:none"></textarea>
+

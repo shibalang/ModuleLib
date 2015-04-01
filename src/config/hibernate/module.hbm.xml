@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+        '-//Hibernate/Hibernate Mapping DTD 3.0//EN'  
+        'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>  
+<hibernate-mapping>  
+    <class name="com.module.beans.Module" table="module">  
+        <id name="id" column="ID">
+            <generator class="native"/>
+        </id>
+         <property name="smbid" />
+         <property name="smbtype1" />
+         <property name="smbtype2" />
+         <property name="proteinname" />
+         <property name="recname" />
+         <property name="altname" />
+         <property name="genename" />
+         <property name="genestatus" />
+         <property name="existence" />
+         <property name="funcclassific" />
+         <property name="originalorganism" />
+         <property name="taxonomicidentifier" />
+         <property name="targetorganism" />
+         <property name="flag" />
+         <property name="proteinsequence" />
+         <property name="proteinlength" />
+         <property name="mass" />
+         <property name="function" />
+         <property name="catalyticactivity" />
+         <property name="cofactor" />
+         <property name="pathway" />
+         <property name="dnasequence" />
+         <property name="vector" />
+         <property name="restrictionsite" />
+         <property name="connway" />
+         <property name="subcellloc" />
+         <property name="interaction" />
+         <property name="structure" />
+         <property name="uniprot" />
+         <property name="ddbj" />
+         <property name="embl" />
+         <property name="genebank" />
+         <property name="refseq" />
+         <property name="kegg" />
+         <property name="modulename_zh" />
+         <property name="modulename_en" />
+         <property name="stuff" />
+         <property name="newgeneid" />
+         <property name="submittdate" />
+         <property name="editdate" />
+    </class>  
+</hibernate-mapping> 

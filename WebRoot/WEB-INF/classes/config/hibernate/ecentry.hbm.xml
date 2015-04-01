@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+        '-//Hibernate/Hibernate Mapping DTD 3.0//EN'  
+        'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>  
+<hibernate-mapping>  
+    <class name="com.module.beans.ECEntity" table="ecentry">  
+        <id name="entry" column="ENTRY">
+            <generator class="assigned"/>
+        </id>
+         <property name="enzymename"/>
+         <property name="ecclass"/>
+         <property name="sysname"/>
+         <property name="reaction"/>
+         <property name="substrate"/>
+         <property name="product"/>
+         <property name="comment"/>
+         <property name="pathway"/>
+         <property name="orthology"/>
+         
+    </class>  
+</hibernate-mapping> 

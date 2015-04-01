@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+.searchInput {
+  width: 800px;
+}
+
+.top{
+	background: url("../img/logo.jpg") no-repeat;
+	background-size:cover;
+	height: 100px;
+}
+.searchDiv{
+	margin-top: 15px;
+	margin-right: 5px;
+	padding-top: 18px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	background-color: #1D858B;
+	height:70px;
+}
+
